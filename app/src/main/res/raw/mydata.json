@@ -1,0 +1,29 @@
+ {
+     "data":{
+            "_id": {
+                    "$oid":"637dabda8ece2c7831212367"
+                   },
+            "find_hint":"",
+            "subject":{
+                    "$oid":"621d0c1d5eda2f2e923c573c"
+                      },
+            "marks_positive":"1",
+            "marks_negative":"1",
+            "question_type":"MCQ",
+            "font":"ARIL",
+            "created":1669180378,
+            "status":1,
+            "created_by": {
+                    "$oid":"6081603a4fe69c275f3a22d1"
+                     },
+            "created_at":1669180378,
+            "q_lang":"EN",
+            "question":"<p><img src=\"https:\/\/d3bioexaf647f4.cloudfront.net\/user_6081603a4fe69c275f3a22d1\/packages\/question\/test-62e909894fda7b2e81067ce4-621d0c1d5eda2f2e923c573c\/media\/image1.png\" \/><\/p>\r\n\r\n<p><img src=\"https:\/\/d3bioexaf647f4.cloudfront.net\/user_6081603a4fe69c275f3a22d1\/packages\/question\/test-62e909894fda7b2e81067ce4-621d0c1d5eda2f2e923c573c\/media\/image15.png\" \/><\/p>",
+            "language":"EN",
+            "opt1":"<p><img src=\"https:\/\/d3bioexaf647f4.cloudfront.net\/user_6081603a4fe69c275f3a22d1\/packages\/question\/test-62e909894fda7b2e81067ce4-621d0c1d5eda2f2e923c573c\/media\/image18.png\" \/><\/p>",
+            "opt2":"<p><img src=\"https:\/\/d3bioexaf647f4.cloudfront.net\/user_6081603a4fe69c275f3a22d1\/packages\/question\/test-62e909894fda7b2e81067ce4-621d0c1d5eda2f2e923c573c\/media\/image10.png\" \/><\/p>",
+            "opt3":"<p><img src=\"https:\/\/d3bioexaf647f4.cloudfront.net\/user_6081603a4fe69c275f3a22d1\/packages\/question\/test-62e909894fda7b2e81067ce4-621d0c1d5eda2f2e923c573c\/media\/image47.png\" \/><\/p>",
+            "opt4":"<p><img src=\"https:\/\/upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f0\/Wikitext-wiki_markup-wikipedia.png\/330px-Wikitext-wiki_markup-wikipedia.png\" \/><\/p>",
+            "ans":"b"
+     }
+  }
