@@ -11,6 +11,7 @@ import android.text.Html;
 import android.text.Spannable;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 String opt2 = jsonObj.getString("opt2");
                 String opt3 = jsonObj.getString("opt3");
                 String opt4 = jsonObj.getString("opt4");
+                String question = jsonObj.getString("question");
 
                 Log.w(TAG," opt1: MainActivity"+opt);
                 Log.w(TAG," opt2: MainActivity"+opt2);
@@ -64,7 +66,15 @@ public class MainActivity extends AppCompatActivity {
                 response.setOpt2(opt2);
                 response.setOpt3(opt3);
                 response.setOpt4(opt4);
+                response.setQuestion(question);
                 arrayList.add(response);
+           DataResponse.Data response=new DataResponse.Data();
+            response.setOpt1("Akk ajsk kjnas kash hello");
+            response.setOpt2(opt2);
+            response.setOpt3("hsdfhsdg  sdjhfbhsd ans");
+            response.setOpt4(opt4);
+            response.setQuestion("Question number 2 ");
+            arrayList.add(response);
 
                 Log.w(TAG," arrayList: MainActivity"+arrayList);
                 adaptor=new DataAdaptor(MainActivity.this,arrayList);
@@ -81,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
     {
         Log.w(TAG,"readFile MainActivity");
 
-
         BufferedReader reader = null;
         reader = new BufferedReader(new InputStreamReader(getAssets().open(fileName), "UTF-8"));
 
@@ -94,6 +103,13 @@ public class MainActivity extends AppCompatActivity {
         Log.w(TAG,"content MainActivity"+content);
         Tv.setText(content);
         return content;
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Toast.makeText(this, "notify data changed", Toast.LENGTH_SHORT).show();
 
     }
 }

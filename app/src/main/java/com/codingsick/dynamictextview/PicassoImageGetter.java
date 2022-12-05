@@ -7,7 +7,9 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.text.Html;
+import android.text.TextPaint;
 import android.util.Log;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
@@ -23,6 +25,7 @@ public class PicassoImageGetter implements Html.ImageGetter {
 
         textView = mTextView;
         context = mainActivity3;
+
 
     }
 
@@ -54,11 +57,38 @@ public class PicassoImageGetter implements Html.ImageGetter {
                             .load(s)
                             .resize(616, increaseHeight)
                             .into((Target) drawable);
+
+
+                    textView.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            TextPaint textPaint = new TextPaint();
+                            textPaint.setTextSize(textView.getTextSize());
+                            float width = textPaint.measureText(textView.getText().toString());
+                            ViewGroup.LayoutParams layoutParams = textView.getLayoutParams();
+                            layoutParams.height = (int)increaseHeight;
+                            textView.setLayoutParams(layoutParams);
+
+                        }
+                    });
+
                 } else {
                     Picasso.get()
                             .load(s)
                             .resize(increaseWidth, increaseHeight)
                             .into((Target) drawable);
+                    textView.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            TextPaint textPaint = new TextPaint();
+                            textPaint.setTextSize(textView.getTextSize());
+                            float width = textPaint.measureText(textView.getText().toString());
+                            ViewGroup.LayoutParams layoutParams = textView.getLayoutParams();
+                            layoutParams.height = (int)increaseHeight;
+                            textView.setLayoutParams(layoutParams);
+
+                        }
+                    });
                 }
 
             }
@@ -116,6 +146,9 @@ public class PicassoImageGetter implements Html.ImageGetter {
 
             width = drawable.getIntrinsicWidth();
             height = drawable.getIntrinsicHeight();
+
+
+
 
 
             drawable.setBounds(0, 0, width, height);
