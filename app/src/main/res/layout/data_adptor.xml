@@ -10,6 +10,7 @@
      android:id="@+id/question"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
+     android:gravity="start|center"
      app:layout_constraintTop_toTopOf="parent"
      android:textColor="@android:color/holo_red_dark"
      app:layout_constraintStart_toStartOf="parent"
@@ -27,11 +28,12 @@
         app:layout_constraintTop_toBottomOf="@+id/question">
 
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:gravity="start|center"
             android:background="@drawable/bg_color"
             android:orientation="horizontal">
 
@@ -41,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:paddingStart="9dp"
-
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
                 android:text="A"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
@@ -52,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Option A"
+                android:gravity="start|center"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -67,14 +71,14 @@
                 android:textSize="15sp" />
 -->
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llOption2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:gravity="center_vertical"
+            android:gravity="start|center"
             android:background="@drawable/bg_color"
             android:orientation="horizontal">
 
@@ -87,32 +91,34 @@
                 android:paddingEnd="9dp"
                 android:paddingBottom="5dp"
                 android:text="B"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvOptionChoice2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Option A"
+                android:text="Option B"
                 android:paddingTop="5dp"
-                android:gravity="center"
+                android:gravity="start|center"
                 android:paddingBottom="5dp"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llOption3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_color"
-            android:gravity="center_vertical"
+            android:gravity="start|top"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -122,26 +128,27 @@
                 android:paddingStart="9dp"
                 android:paddingTop="5dp"
                 android:paddingEnd="9dp"
-                android:paddingBottom="5dp"
                 android:text="C"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvOptionChoice3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-
+                android:gravity="start|center"
                 android:text="Option A"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <LinearLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llOption4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,7 +171,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvOptionChoice4"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Option A"
@@ -173,7 +180,7 @@
                 android:textSize="15sp" />
 
 
-        </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
@@ -20,6 +21,7 @@ public class DataAdaptor extends RecyclerView.Adapter<DataAdaptor.MyholderClass>
     ArrayList<DataResponse.Data> arrayList;
     MainActivity context;
     PicassoImageGetter imageGetter,imageGetter2,imageGetter3,imageGetter4,imageGetter5;
+
 
     public DataAdaptor(MainActivity context,ArrayList<DataResponse.Data> arrayList) {
         this.arrayList=arrayList;
@@ -34,11 +36,11 @@ public class DataAdaptor extends RecyclerView.Adapter<DataAdaptor.MyholderClass>
 
     @Override
     public void onBindViewHolder(@NonNull MyholderClass holder, int position) {
-               imageGetter=new PicassoImageGetter(holder.textView,context);
-               imageGetter2=new PicassoImageGetter(holder.textView2, context);
-               imageGetter3=new PicassoImageGetter(holder.textView3, context);
-               imageGetter4=new PicassoImageGetter(holder.textView4, context);
-               imageGetter5=new PicassoImageGetter(holder.txQuestion, context);
+               imageGetter=new PicassoImageGetter(holder.textView,context,holder.linearLayoutCompat1);
+               imageGetter2=new PicassoImageGetter(holder.textView2, context,holder.linearLayoutCompat2);
+               imageGetter3=new PicassoImageGetter(holder.textView3, context,holder.linearLayoutCompat3);
+               imageGetter4=new PicassoImageGetter(holder.textView4, context,holder.linearLayoutCompat4);
+               imageGetter5=new PicassoImageGetter(holder.txQuestion, context,holder.linearLayoutCompat4);
 
                    String opt = arrayList.get(position).getOpt1();
                    String opt2 = arrayList.get(position).getOpt2();
@@ -46,16 +48,6 @@ public class DataAdaptor extends RecyclerView.Adapter<DataAdaptor.MyholderClass>
                    String opt4 = arrayList.get(position).getOpt4();
                    String question = arrayList.get(position).getQuestion();
 
-
-        Log.w(TAG," opt1: DataAdaptor"+opt);
-        Log.w(TAG," opt2: DataAdaptor"+opt2);
-        Log.w(TAG," opt3: DataAdaptor"+opt3);
-        Log.w(TAG," opt4: DataAdaptor"+opt4);
-
-        Log.w(TAG," imageGetter: DataAdaptor"+imageGetter);
-        Log.w(TAG," imageGetter2: DataAdaptor"+imageGetter2);
-        Log.w(TAG," imageGetter3: DataAdaptor"+imageGetter3);
-        Log.w(TAG," imageGetter4: DataAdaptor"+imageGetter4);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 
@@ -112,12 +104,15 @@ public class DataAdaptor extends RecyclerView.Adapter<DataAdaptor.MyholderClass>
 
     @Override
     public int getItemCount() {
-        Toast.makeText(context, "list of size "+arrayList.size(), Toast.LENGTH_SHORT).show();
         return arrayList.size();
     }
 
     public class MyholderClass extends RecyclerView.ViewHolder {
         TextView textView,textView2,textView3,textView4,txQuestion;
+        LinearLayoutCompat linearLayoutCompat1;
+        LinearLayoutCompat linearLayoutCompat2;
+        LinearLayoutCompat linearLayoutCompat3;
+        LinearLayoutCompat linearLayoutCompat4;
         public MyholderClass(@NonNull View itemView) {
             super(itemView);
            textView=itemView.findViewById(R.id.tvOptionChoice);
@@ -125,6 +120,10 @@ public class DataAdaptor extends RecyclerView.Adapter<DataAdaptor.MyholderClass>
            textView3=itemView.findViewById(R.id.tvOptionChoice3);
            textView4=itemView.findViewById(R.id.tvOptionChoice4);
             txQuestion =itemView.findViewById(R.id.question);
+            linearLayoutCompat1=itemView.findViewById(R.id.llOption);
+            linearLayoutCompat2=itemView.findViewById(R.id.llOption2);
+            linearLayoutCompat3=itemView.findViewById(R.id.llOption3);
+            linearLayoutCompat4=itemView.findViewById(R.id.llOption4);
         }
     }
 }

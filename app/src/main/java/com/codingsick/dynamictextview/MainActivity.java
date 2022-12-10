@@ -109,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "notify data changed", Toast.LENGTH_SHORT).show();
 
     }
 }
