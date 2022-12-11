@@ -147,14 +147,13 @@
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/llOption4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:gravity="start|center"
             android:background="@drawable/bg_color"
-            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -166,6 +165,8 @@
                 android:paddingEnd="9dp"
                 android:paddingBottom="5dp"
                 android:text="D"
+                android:layout_gravity="start|center"
+                android:gravity="start|center"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -174,13 +175,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="Option A"
+                android:text="Option B"
+                android:paddingTop="5dp"
+                android:gravity="start|center"
+                android:paddingBottom="5dp"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

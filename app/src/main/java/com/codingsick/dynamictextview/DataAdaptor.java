@@ -36,11 +36,11 @@ public class DataAdaptor extends RecyclerView.Adapter<DataAdaptor.MyholderClass>
 
     @Override
     public void onBindViewHolder(@NonNull MyholderClass holder, int position) {
-               imageGetter=new PicassoImageGetter(holder.textView,context,holder.linearLayoutCompat1);
-               imageGetter2=new PicassoImageGetter(holder.textView2, context,holder.linearLayoutCompat2);
-               imageGetter3=new PicassoImageGetter(holder.textView3, context,holder.linearLayoutCompat3);
-               imageGetter4=new PicassoImageGetter(holder.textView4, context,holder.linearLayoutCompat4);
-               imageGetter5=new PicassoImageGetter(holder.txQuestion, context,holder.linearLayoutCompat4);
+        imageGetter5=new PicassoImageGetter(holder.txQuestion, context,holder.linearLayoutCompat4);
+        imageGetter=new PicassoImageGetter(holder.textView,context,holder.linearLayoutCompat1);
+        imageGetter2=new PicassoImageGetter(holder.textView2, context,holder.linearLayoutCompat2);
+        imageGetter3=new PicassoImageGetter(holder.textView3, context,holder.linearLayoutCompat3);
+        imageGetter4=new PicassoImageGetter(holder.textView4, context,holder.linearLayoutCompat4);
 
                    String opt = arrayList.get(position).getOpt1();
                    String opt2 = arrayList.get(position).getOpt2();
@@ -115,10 +115,10 @@ public class DataAdaptor extends RecyclerView.Adapter<DataAdaptor.MyholderClass>
         LinearLayoutCompat linearLayoutCompat4;
         public MyholderClass(@NonNull View itemView) {
             super(itemView);
-           textView=itemView.findViewById(R.id.tvOptionChoice);
-           textView2=itemView.findViewById(R.id.tvOptionChoice2);
-           textView3=itemView.findViewById(R.id.tvOptionChoice3);
-           textView4=itemView.findViewById(R.id.tvOptionChoice4);
+             textView=itemView.findViewById(R.id.tvOptionChoice);
+             textView2=itemView.findViewById(R.id.tvOptionChoice2);
+             textView3=itemView.findViewById(R.id.tvOptionChoice3);
+             textView4=itemView.findViewById(R.id.tvOptionChoice4);
             txQuestion =itemView.findViewById(R.id.question);
             linearLayoutCompat1=itemView.findViewById(R.id.llOption);
             linearLayoutCompat2=itemView.findViewById(R.id.llOption2);
